@@ -1,0 +1,19 @@
+{
+	"name": "rc2c/TheCallRBundle",
+	"type": "library",
+	"description": "TheCallR SDK",
+	"keywords": ["thecallr", "sms"],
+	"homepage": "http://thecallr.com/fr/",
+	"license": ["GPL-1.0+"],
+	"authors": [
+		{
+			"name": "RC2C"
+		}
+	],
+	"require": {
+		"php": ">=4.3.10"
+	},
+	"autoload": {
+		"classmap": ["src"]
+	}
+}
