@@ -1,5 +1,5 @@
 {
-	"name": "rc2c/TheCallRBundle",
+	"name": "rc2c/the-call-rbundle",
 	"type": "library",
 	"description": "TheCallR SDK",
 	"keywords": ["thecallr", "sms"],
