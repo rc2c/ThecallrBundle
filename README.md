@@ -1,4 +1,4 @@
-THECALLR PHP SDK 1.0
+TheCallrBundle
 ====================
 
 ## Prerequisites
@@ -7,22 +7,56 @@ THECALLR PHP SDK 1.0
 * The PHP cURL extension
 
 ## Installation
-Unzip to your project directory and then include the library file:
 
-	require '/path/to/THECALLR-PHP/src/ThecallrClient.php';
+### Get the bundle
 
+With composer :
 
-## Code Samples
-If you want to execute the code samples, edit the login and password variables with your credentials:
+``` json
+{
+    "require": {
+        "rc2c/the-callr-bundle": "dev-master"
+    }
+}
+```
+### Initialize the bundle
+To start using the bundle, register the bundle in your application's kernel class:
+
+``` php
+// app/AppKernel.php
+public function registerBundles()
+{
+    $bundles = array(
+        // TheCallr
+        new Rc2c\TheCallrBundle\Rc2cTheCallrBundle()
+        // ...
+    );
+)
+```
+### Configure the bundle
+
+```yml
+rc2c.the_callr.login: 'your_login'
+rc2c.the_callr.password: 'your_password'
+rc2c.the_callr.sender: 'THECALLR'
+```
+## Code sample
 
 ```php
-$thecallrLogin = '_YOUR_LOGIN_';
-$thecallrPassword = '_YOUR_PASSWORD_';
-$THECALLR = new ThecallrClient($thecallrLogin, $thecallrPassword);
+// Load thecallr service
+$sms_Manager = $this->container->get('rc2c.the_callr');
+// Your phone number (international format)
+$phone       = '+33610111213';
+// Your message (text)
+$message     = 'your text message';
+
+try {
+    // Send sms
+    $sms_Manager->send($phone, $message);
+} catch(Exception $e) {
+    $this->logMessage($e->getCode().'-'.$e->getMessage(), 'err');
+}
 ```
 
-## Full Documentation
+## Documentation TheCallr API
 http://thecallr.com/docs/
-
-## Report Issues
-Email support@thecallr.com.
