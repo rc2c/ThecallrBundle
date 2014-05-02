@@ -5,16 +5,16 @@ namespace Rc2c\TheCallrBundle\Utils;
 class TheCallr
 {
     protected $srevice = null;
-    protected $from = null;
+    protected $from    = null;
     
     public function __construct($account , $auth , $from)
     {
         try {
             $this -> service = new \ThecallrClient($account, $auth);
             $this -> from = $from;
-        } catch(Exception $e) {
+        } catch(\Exception $e) {
             $msg = $this -> getErrorMessage($e);
-            throw new Exception(sprintf('Erreur de connection API thecallr !'.$msg));
+            throw new \Exception(sprintf('Erreur de connection API thecallr !'.$msg));
         }
     }
     
@@ -30,23 +30,23 @@ class TheCallr
         
         try {
             return $this -> service -> call('sms.send', $this -> getFrom(), $to, $message, $options);
-        } catch(Exception $e) {
+        } catch(\Exception $e) {
             $msg = $this -> getErrorMessage($e);
-            throw new Exception('Erreur thecallr : '.$msg , $e -> getCode());
+            throw new \Exception('Erreur thecallr : '.$msg , $e -> getCode());
         }
     }
-
+    
     public function getFrom()
     {
         return $this -> from;
     }
-
+    
     /**
      * Retourne le message d'erreur en fonction du code erreur
      * @param  [type] $errorCode [description]
      * @return [type]            [description]
      */
-    protected function getErrorMessage(Exception $error)
+    protected function getErrorMessage(\Exception $error)
     {
         $msg = "";
         switch($error -> getCode()) {
