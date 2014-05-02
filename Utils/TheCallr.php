@@ -9,15 +9,12 @@ class TheCallr
     
     public function __construct($account , $auth , $from)
     {
-        var_dump($account);
-        die('prout');
-
         try {
             $this -> service = new \ThecallrClient($account, $auth);
             $this -> from = $from;
         } catch(Exception $e) {
             $msg = $this -> getErrorMessage($e);
-            throw new Exception(sprintf('Erreur de connection API thecallr!'.$msg));
+            throw new Exception(sprintf('Erreur de connection API thecallr !'.$msg));
         }
     }
     
