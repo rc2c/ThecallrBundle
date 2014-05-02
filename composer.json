@@ -1,19 +1,22 @@
 {
 	"name": "rc2c/the-callr-bundle",
-	"type": "library",
-	"description": "TheCallR SDK",
-	"keywords": ["thecallr", "sms"],
-	"homepage": "http://thecallr.com/fr/",
-	"license": ["GPL-1.0+"],
-	"authors": [
-		{
-			"name": "RC2C"
-		}
-	],
-	"require": {
-		"php": ">=4.3.10"
-	},
-	"autoload": {
-		"classmap": ["src"]
-	}
+    "type": "symfony-bundle",
+    "description": "TheCallR SDK bundle for Symfony2.",
+    "keywords": ["Thecallr", "sms", "call"],
+    "homepage": "http://thecallr.com/fr/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "RC2C",
+            "email": "tech@rc2c.fr"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.2"
+    },
+    "autoload": {
+        "psr-0": { "Rc2c\\TheCallrBundle": "" }
+    },
+    "target-dir": "Rc2c/TheCallrBundle"
 }
