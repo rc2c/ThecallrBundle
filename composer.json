@@ -18,7 +18,8 @@
     "autoload": {
         "psr-0" : {
             "Rc2c\\ThecallrBundle" : ""
-        }
+        },
+        "classmap": ["Sdk/src"]
     },
     "target-dir": "Rc2c/ThecallrBundle"
 }
