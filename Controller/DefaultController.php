@@ -1,6 +1,6 @@
 <?php
 
-namespace Rc2c\TheCallrBundle\Controller;
+namespace Rc2c\ThecallrBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;

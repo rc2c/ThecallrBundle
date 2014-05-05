@@ -1,6 +1,6 @@
 <?php
 
-namespace Rc2c\TheCallrBundle\Utils;
+namespace Rc2c\ThecallrBundle\Utils;
 
 class TheCallr
 {

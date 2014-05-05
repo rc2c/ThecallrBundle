@@ -1,4 +1,4 @@
-TheCallrBundle
+ThecallrBundle
 ====================
 
 ## Prerequisites
@@ -27,8 +27,8 @@ To start using the bundle, register the bundle in your application's kernel clas
 public function registerBundles()
 {
     $bundles = array(
-        // TheCallr
-        new Rc2c\TheCallrBundle\Rc2cTheCallrBundle()
+        // Thecallr
+        new Rc2c\ThecallrBundle\Rc2cThecallrBundle()
         // ...
     );
 )

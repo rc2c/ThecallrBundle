@@ -1,6 +1,6 @@
 <?php
 
-namespace Rc2c\TheCallrBundle\DependencyInjection;
+namespace Rc2c\ThecallrBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;

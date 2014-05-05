@@ -1,6 +1,6 @@
 <?php
 
-namespace Rc2c\TheCallrBundle\Tests\Controller;
+namespace Rc2c\ThecallrBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

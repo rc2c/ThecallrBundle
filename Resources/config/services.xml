@@ -4,8 +4,8 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
-      <!-- Service TheCallr -->
-      <service id="rc2c.the_callr" class="Rc2c\TheCallrBundle\Utils\TheCallr">
+      <!-- Service Thecallr -->
+      <service id="rc2c.the_callr" class="Rc2c\ThecallrBundle\Utils\TheCallr">
         <argument>%rc2c.the_callr.login%</argument>
         <argument>%rc2c.the_callr.password%</argument>
         <argument>%rc2c.the_callr.sender%</argument>
