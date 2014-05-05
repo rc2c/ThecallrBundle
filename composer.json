@@ -16,7 +16,7 @@
         "php": ">=5.2.0"
     },
     "autoload": {
-        "classmap": ["Utils/TheCallr.php", "Sdk"]
+        "classmap": ["Utils/TheCallr.php", "Sdk/src"]
     },
     "target-dir": "Rc2c/TheCallrBundle"
 }
